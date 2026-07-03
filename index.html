@@ -319,8 +319,12 @@
             }
 
             .hero {
-                margin-top: 220px; /* Adjusts the main banner down so it doesn't hide behind the newly expanded header */
+                margin-top: 220px; /* Keeps the space for the header */
+                background: var(--primary) !important; /* Forces the deep blue background to stay visible on mobile */
+                height: auto; /* Lets the section expand naturally around the text */
+                padding: 4rem 2rem; /* Adds nice spacing inside the blue section */
             }
+
 
 
 
