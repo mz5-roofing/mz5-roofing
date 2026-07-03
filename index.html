@@ -292,18 +292,20 @@
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
         }
-                @media (max-width: 768px) {
-            .contact-container { grid-template-columns: 1fr; }
-            .hero-content h1 { font-size: 2.2rem; }
-            
-            /* Add these to fix the header on mobile: */
+        @media (max-width: 768px) {
+            .contact-container { 
+                grid-template-columns: 1fr; 
+            }
+            .hero-content h1 { 
+                font-size: 2.2rem; 
+            }
             .nav-container {
                 flex-direction: column;
                 text-align: center;
-                padding: 2rem 1rem; /* Increased padding makes the background image taller */
+                padding: 2rem 1rem;
             }
             .nav-links {
-                margin-top: 1.5rem; /* Pushes links down to expose more of the image center */
+                margin-top: 1.5rem;
                 display: flex;
                 gap: 0.75rem;
                 justify-content: center;
@@ -312,23 +314,20 @@
             }
             .nav-links a {
                 margin-left: 0;
-                font-size: 1rem; /* Slightly larger for easier tapping */
+                font-size: 1rem;
                 color: #ffffff;
                 font-weight: 700;
-                text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9); /* Stronger shadow for mobile clarity */
+                text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9);
             }
-
             .hero {
-                margin-top: 220px; /* Keeps the space for the header */
-                background: var(--primary) !important; /* Forces the deep blue background to stay visible on mobile */
-                height: auto; /* Lets the section expand naturally around the text */
-                padding: 4rem 2rem; /* Adds nice spacing inside the blue section */
+                margin-top: 220px;
+                background: var(--primary) !important;
+                height: auto;
+                padding: 4rem 2rem;
             }
 
 
-
-
-        @media (max-width: 768px) {
+   @media (max-width: 768px) {
             .contact-container { grid-template-columns: 1fr; }
             .hero-content h1 { font-size: 2.2rem; }
         }
