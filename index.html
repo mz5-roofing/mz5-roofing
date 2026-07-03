@@ -25,7 +25,7 @@
             --secondary: #f59e0b; /* Accent Amber/Gold */
             --dark: #1f2937;
             --light: #ffffff;
-            --brand-red: #e11d48; /* Vibrant Premium Crimson Red */
+            --brand-red: #e11d48;
         }
 
         /* --- Navigation --- */
@@ -59,7 +59,7 @@
             padding: 0.5rem 1rem;
             font-weight: 700;
             border-radius: 20px;
-            background: rgba(0, 0, 0, 0.4); /* Modern semi-transparent dark pill background */
+            background: rgba(0, 0, 0, 0.4);
             border: 1px solid rgba(255, 255, 255, 0.2);
             transition: all 0.3s ease;
         }
@@ -84,27 +84,30 @@
         .hero {
             background: linear-gradient(rgba(30, 58, 138, 0.85), rgba(31, 41, 55, 0.85)), 
                         url('https://images.unsplash.com/photo-1635422998741-f67f56df738b?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
-            height: 80vh;
+            height: auto;
+            min-height: 85vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             color: var(--light);
-            padding: 0 2rem;
+            padding: 4rem 2rem;
             margin-top: 70px;
         }
 
-        /* Premium Chrome & Red Brand Title Styling */
-        .hero-brand-title {
-            font-size: 2.25rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 0.75rem;
-            background: linear-gradient(145deg, #ffffff 0%, #ff4b4b 50%, #8b0000 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            filter: drop-shadow(0px 2px 0px #ffffff) drop-shadow(0px 4px 8px rgba(0,0,0,0.8));
+        /* Center the brand logo container */
+        .hero-brand-logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-brand-logo {
+            max-height: 140px; /* Generous sizing for desktop */
+            width: auto;
+            display: block;
+            filter: drop-shadow(0px 4px 10px rgba(0,0,0,0.5));
         }
 
         .hero-content h1 {
@@ -349,9 +352,8 @@
                 grid-template-columns: 1fr; 
             }
             
-            .hero-brand-title {
-                font-size: 1.6rem;
-                letter-spacing: 1.5px;
+            .hero-brand-logo {
+                max-height: 100px; /* Scales down logo nicely on mobile screens */
             }
 
             .hero-content h1 { 
@@ -359,7 +361,7 @@
             }
             
             .nav-container {
-                padding-top: 8rem; /* Pushes links precisely below the tire level */
+                padding-top: 8rem;
                 padding-bottom: 1rem;
                 width: 100%;
             }
@@ -403,7 +405,10 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <div class="hero-brand-title">MZ5 Roofing and Exteriors</div>
+            <!-- Brand Logo Added in Place of Text Title -->
+            <div class="hero-brand-logo-container">
+                <img src="Screenshot_20260703_032655_Photos.jpg" alt="MZ5 Roofing and Exteriors Logo" class="hero-brand-logo">
+            </div>
             <h1>Protecting Your Property From Top to Bottom</h1>
             <p>Premium roofing and exterior transformation services in Wiggins Colorado.</p>
             <a href="#contact" class="btn-large">Schedule Free Inspection</a>
