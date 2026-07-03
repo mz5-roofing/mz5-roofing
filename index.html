@@ -58,11 +58,13 @@
 
         .nav-links a {
             text-decoration: none;
-            color: var(--dark);
+            color: #ffffff; /* Changed from var(--dark) to white */
             margin-left: 1.5rem;
-            font-weight: 600;
+            font-weight: 700; /* Made it a bit bolder to pop more */
             transition: color 0.3s;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8); /* Adds a sharp dark drop-shadow */
         }
+
 
         .nav-links a:hover {
             color: var(--primary);
@@ -82,7 +84,7 @@
         /* --- Hero Section --- */
         .hero {
             background: linear-gradient(rgba(30, 58, 138, 0.85), rgba(31, 41, 55, 0.85)), 
-                        url('https://images.unsplash.com/photo-1635422998741-f67f56df738b?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+                        url(e'https://images.unsplash.com/photo-1635422998741-f67f56df738b?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
             height: 80vh;
             display: flex;
             align-items: center;
@@ -310,9 +312,12 @@
             }
             .nav-links a {
                 margin-left: 0;
-                font-size: 0.9rem;
-                text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8); /* Adds a faint white glow behind text so it's readable over the truck image */
+                font-size: 1rem; /* Slightly larger for easier tapping */
+                color: #ffffff;
+                font-weight: 700;
+                text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9); /* Stronger shadow for mobile clarity */
             }
+
             .hero {
                 margin-top: 220px; /* Adjusts the main banner down so it doesn't hide behind the newly expanded header */
             }
