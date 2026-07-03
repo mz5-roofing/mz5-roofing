@@ -29,14 +29,14 @@
 
         /* --- Navigation --- */
         header {
-            background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), 
-                        url('file_00000000c5907230b19265ee64cc9d4f.png') no-repeat center center/cover;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            background: url('file_00000000c5907230b19265ee64cc9d4f.png') no-repeat center center/cover;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.25); /* Slightly darker shadow to help it stand out */
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
         }
+
 
 
         .nav-container {
@@ -298,10 +298,10 @@
             .nav-container {
                 flex-direction: column;
                 text-align: center;
-                padding: 0.5rem 1rem;
+                padding: 2rem 1rem; /* Increased padding makes the background image taller */
             }
             .nav-links {
-                margin-top: 0.5rem;
+                margin-top: 1.5rem; /* Pushes links down to expose more of the image center */
                 display: flex;
                 gap: 0.75rem;
                 justify-content: center;
@@ -311,11 +311,12 @@
             .nav-links a {
                 margin-left: 0;
                 font-size: 0.9rem;
+                text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8); /* Adds a faint white glow behind text so it's readable over the truck image */
             }
             .hero {
-                margin-top: 130px; /* Gives extra space for the taller mobile menu */
+                margin-top: 220px; /* Adjusts the main banner down so it doesn't hide behind the newly expanded header */
             }
-        }
+
 
 
         @media (max-width: 768px) {
